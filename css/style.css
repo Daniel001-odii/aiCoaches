@@ -73,6 +73,12 @@ main{
     /* font-size: 20px; */
   }
 
+  .aic_btn{
+    background: #239789;
+    color: #fff;
+    font-weight: bold;
+  }
+  
 .top_btn{
   background: #fff !important;
   color: #239789 !important;

@@ -80,6 +80,66 @@
         </div>
       </nav>
     </header>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content"  style="height: 90vh !important;">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Create Coach</strong></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body" style="display: flex; flex-direction: row; justify-content: space-between; height: 100% !important;">
+        <div class="left_nav">Left nav</div>
+        <div class="card_list_area" style=" height: 90%; width: 70%; display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; overflow-y: scroll;">
+            <!-- image cards start here -->
+            <div class="card" style="width: 15rem;">
+              <img src="/images/Lila-Ananda.png" class="card-img-top" alt="...">
+              <div class="card-body justify-content-center" style="text-align: center;">
+                <h5 class="card-title"><b>Create a new</b></h5>
+                <p class="card-text">Ai Coach</p>
+                <a href="#" class="btn aic_btn">New Coach</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+              <img src="/images/Doug-Strong.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Doug Strong</b></h5>
+                <p class="card-text">Body Building Coach</p>
+                <a href="#" class="btn aic_btn">Select Coach</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+              <img src="/images/Lila-Ananda.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Lila Ananda</b></h5>
+                <p class="card-text">Yoga Coach</p>
+                <a href="#" class="btn aic_btn">Select Coach</a>
+              </div>
+            </div>
+
+            <div class="card" style="width: 15rem;">
+              <img src="/images/Lila-Ananda.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><b>Lila Ananda</b></h5>
+                <p class="card-text">Yoga Coach</p>
+                <a href="#" class="btn aic_btn">Select Coach</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal ends here -->
     <main>
 <div class="container-fluid">
   <div class="home_first mt-3" style="height: 100px; width: 100%; align-items: center; display: flex; flex-direction: row; justify-content: space-between;">
@@ -89,7 +149,9 @@
       </div>
       <div>
         <button class="btn top_btn">Back to Workspace</button>
-        <button class="btn" style="background: #239789; color: #fff;"><strong>Coach</strong></button>
+        <button class="btn" style="background: #239789; color: #fff;" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          <strong>Create Coach</strong>
+        </button>
       </div>
       
   </div>
