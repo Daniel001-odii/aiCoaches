@@ -12,7 +12,7 @@
   <body class="">
     <header class="">
       <nav class="navbar navbar-expand-lg" style="background: #fff;">
-        <div class="container">
+        <div class="container-fluid">
           <a class="navbar-brand" href="#"><img src="./images/logo-dark.svg" style="height: 50px;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -81,20 +81,19 @@
       </nav>
     </header>
     <main>
-    <div class="container">
+    <div class="container-fluid p-4">
       <div class="home_first mt-3" style="height: 100px; width: 100%; align-items: center; display: flex; flex-direction: row; justify-content: space-between;">
           <div>
             <h4>Widget Editor <span class="badge" style="background: #239789;">1</span></h4>
             <span>in GST</span>
           </div>
-          <button class="btn" style="background: #239789; color: #fff;">Create Workspace</button>
+          <button class="btn top_btn" style="background: #fff; color: #239789; font-weight: bold;">Back to Coaches</button>
       </div>
 
-      <div class="home_first mt-3">
-
+      <div class="home_first mt-3" style="display: flex; justify-content: ;">
 
         <!-- left facing card starts here.............. -->
-        <div class="card" style="display: flex; flex-direction: column; max-width: 650px; background: #fff;  padding: 20px;">
+        <div class="card" style="display: flex; flex-direction: column; width: 750px; background: #fff;  padding: 20px;">
           <div class="aic_card_head" style="width: 100%; margin: 0 auto !important; display: flex; justify-content: center; align-items: center !important;">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
@@ -385,22 +384,68 @@
           <div class="aic_card_footer" style="border-top: 1px solid #efefef; padding: 10px 2px; display: flex; flex-direction: row; justify-content: flex-end;">
             <button class="btn" style="background: #239789; color: #fff;">Save</button>
           </div>
-      </div>
+        </div>
         <!-- left facing card ends here.............. -->
 
+        <!-- RIGHT FACING CARD STARTS HERE--------------- -->
+        <div class="" style="max-width: 700px; display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
+          <!-- <img src="/images/Miles-Uplift.png"> -->
+          <div style="background: url('/images/Miles-Uplift.png');
+          width: 300px;
+          min-height: 350px;
+          /* border: 1px solid red; */
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;" class="miles_image"></div>
+
+          <div class="card" style="max-width: 500px; border: none; border-radius: 10px;">
+            <div class="aic_card_header" style="background: #A86463; padding: 15px; border-radius: 10px 10px 0px 0px; display: flex; justify-content: space-between; max-height: 70px;">
+              <div class="image_thumb" style="display: flex; flex-direction: row; justify-content: center; align-items: center; color: #fff;">
+                <img src="/images/Atlas.png" height="40px" width="40px" style="border-radius: 50%;">
+                <h4>Atlas</h4>
+              </div>
+              <span class="" style="color: #fff; font-size: 30px; cursor: pointer; padding: 0px 10px;">&times;</span>
+            </div>
+            <div class="card_body" style="overflow-y: scroll; height: 150px;">
+                <div class="ai_chat_msg" style="padding: 20px; display: flex; flex-direction: column; align-content: flex-start; justify-content: flex-start; gap: 10px; background: #EFB0B0;">
+                  <div class="image_thumb" style="display: flex; flex-direction: row; color: #fff;">
+                    <img src="/images/Atlas.png" height="40px" width="40px" style="border-radius: 50%;">
+                    <h4>Atlas</h4>
+                  </div>
+                  <div style="padding: 20px; background: #FEF4F3;  border-radius: 10px;">
+                    Welcome to your personal AI Coach i'm here to...
+                  </div>
+                </div>
+            </div>
+            <div class="chat_footer" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+              <div class="chat_input mt-3" style="border-radius: 40px; border: 2px solid #efefef; width: 90%; padding: 10px;">
+                <input type="text" style="width: 90%; border: none; outline: none;" placeholder="Send a message">
+                <i class="bi bi-send-fill" style=""></i>
+              </div>
+              <span class="m-2">Powered by AiCoaches</span>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
     </main>
     <footer>
-      <div class="container aic_footer">
+      <div class="container-fluid aic_footer">
         <div>2024@AiCoaches</div>
         <div>Support</div>
       </div>
     </footer>
   </body>
   <style>
-    /* .dropdown-item */
+   .home_first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* gap: 0px; */
+   }
+
+
   </style>
   <script>
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
