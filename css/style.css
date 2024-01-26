@@ -1,0 +1,58 @@
+.card .nav .active{
+    background: #239789;
+    border-radius: none !important;
+    color: #fff !important;
+  }
+  .nav-item > button{
+    border: 1px solid #efefef;
+    border-radius: 0px !important;
+    color: #000 !important;
+  }
+
+
+  .tab-pane{
+    color: #000 !important;
+  }
+  table{
+    /* border: none !important; */
+  }
+  tr{
+    padding: 30px !important;
+    /* border: 1px solid red; */
+  }
+  body{
+    background: #F1F6FB;
+    /* height: 100dvh; */
+  }
+  /* color: #239789 */
+  .nav-link:hover{
+    color: #239789 !important;
+  }
+  .dropdown-item:hover{
+    color: #239789 !important;
+    background: none;
+  }
+
+  .aic_aaa{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .dropdown-menu{
+    margin-bottom: 10px !important;
+  }
+
+  .aic_footer{
+    /* position: absolute; */
+    /* bottom: 0px; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    color: #5a5a5a;
+    /* font-size: 20px; */
+  }

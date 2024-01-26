@@ -84,7 +84,7 @@
 <div class="container">
   <div class="home_first mt-3" style="height: 100px; width: 100%; align-items: center; display: flex; flex-direction: row; justify-content: space-between; align-items: center;">
       <div>
-        <h4>Manage Orders</h4>
+        <h4>Integrations</h4>
       </div>
       <div class="" style="display: flex; flex-direction: row; width: 75%; gap: 10px;">
         <div class="input-group mb-3">
@@ -93,43 +93,21 @@
             <option selected>GST</option>
           </select>
         </div>
+
         <div class="input-group mb-3">
-          <label class="input-group-text" for="inputGroupSelect01">Workspace</label>
+          <label class="input-group-text" for="inputGroupSelect01">Coaches</label>
           <select class="form-select" id="inputGroupSelect01">
-            <option selected>GST</option>
+            <option selected>Test Coach</option>
           </select>
         </div>
       </div>
   </div>
 
   <div class="home_first mt-3">
-    <!-- table ends here............ -->
-    <div class="table-responsive">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>TRANSACTION ID</th>
-          <th >AMOUNT</th>
-          <th >CURRECNY</th>
-          <th >NAME</th>
-          <th >EMAIL</th>
-          <th >IP ADDRESS</th>
-          <th >STATUS</th>
-          <th >CREATED</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td colspan="8" style="text-align: center; padding: 40px;">No Orders Found</td>
-        </tr>
-        
-        <!-- Add more rows as needed -->
-      </tbody>
-
-    </table>
+  <div class="card" style="padding: 40px; display: flex; flex-direction: row; gap: 10px;">
+    
+      
   </div>
-    <!-- table ends here............ -->
   </div>
 </div>
     </main>
@@ -141,10 +119,5 @@
     </footer>
   </body>
   <style>
-    /* .dropdown-item */
   </style>
-  <script>
-    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-  </script>
 </html>  

@@ -6,11 +6,13 @@
     <title>AiCoaches</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </head>
   <body class="">
     <header class="">
       <nav class="navbar navbar-expand-lg" style="background: #fff;">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="#"><img src="./images/logo-dark.svg" style="height: 50px;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -18,22 +20,22 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Workspace</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Workspace</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Other Leads
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="orders.html">
                     <div class="aic_aaa">
                       <i class="bi bi-cart3"></i><span>Manage Orders</span>
                     </div>
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="leads.html">
                     <div class="aic_aaa">
                       <i class="bi bi-stack"></i><span>My Leads</span>
                     </div>
@@ -42,32 +44,32 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                  Visitor Response
                 </a>
 
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="conservation.html">
                     <div class="aic_aaa">
                       <i class="bi bi-chat-square-text-fill"></i><span>Conversation</span>
                     </div>
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item" href="youtube-library.html">
                     <div class="aic_aaa">
-                      <i class="bi bi-youtube"></i><span>Conversation</span>
+                      <i class="bi bi-youtube"></i><span>Youtube Library</span>
                     </div>
                     </a>
                   </li>
                 </ul>
               
               <li class="nav-item">
-                <a class="nav-link" href="#">Analytics</a>
+                <a class="nav-link" href="analytics.html">Analytics</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Integration</a>
+                <a class="nav-link" href="integrations.html">Integration</a>
               </li>
               <li class="nav-item">
                 <i class="nav-link bi bi-person-fill" style="border: 1px solid #efefef; border-radius: 10px;"></i>
@@ -121,59 +123,12 @@
 </div>
     </main>
     <footer>
-      <div class="aic_footer">
+      <div class="container aic_footer">
         <div>2024@AiCoaches</div>
         <div>Support</div>
       </div>
-
-      
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
   <style>
-    table{
-      /* border: none !important; */
-    }
-    tr{
-      padding: 30px !important;
-      /* border: 1px solid red; */
-    }
-    body{
-      background: #F1F6FB;
-      /* height: 100dvh; */
-    }
-    /* color: #239789 */
-    .nav-link:hover{
-      color: #239789 !important;
-    }
-    .dropdown-item:hover{
-      color: #239789 !important;
-      background: none;
-    }
-
-    .aic_aaa{
-      display: flex;
-      flex-direction: row;
-      gap: 10px;
-      align-items: center;
-      justify-content: flex-start;
-      /* border: 1px solid red; */
-    }
-
-    .dropdown-menu{
-      margin-bottom: 10px !important;
-    }
-
-    .aic_footer{
-      position: absolute;
-      bottom: 0px;
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      padding: 30px;
-      font-size: 20px;
-    }
-
-    /* .dropdown-item */
   </style>
 </html>  
