@@ -41,17 +41,43 @@
     </div>
   </div>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="editWorkspace" tabindex="-1" aria-labelledby="editWorkspaceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="editWorkspaceLabel"><strong>Edit Workspace</strong></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Name <span style="color: red;">*</span></label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Workspace Name">
+          
+        </div>
+        <span class="" style="color: #7d7d7d;">30 Characters remaining</span>
+      </div>
+      <div class="modal-footer justify-content-start">
+        <button type="button" class="btn" style="background: #239789; color: #fff;">Create</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <!-- modal content ends here-- -->
 <div class="container-fluid">
-  <div class="home_first" style="height: 100px; width: 100%; align-items: center; display: flex; flex-direction: row; justify-content: space-between;">
+  <div class="home_first mt-3" style="height: 100px; width: 100%; align-items: center; display: flex; flex-direction: row; justify-content: space-between;">
       <div>
-        <h4>Workspace <span class="badge" style="background: #239789;">1</span></h4>
+        <h4><b>Workspace</b> <span class="badge" style="background: #239789;">1</span></h4>
       </div>
       <button type="button" data-bs-toggle="modal" data-bs-target="#createWorkspace" class="btn" style="background: #239789; color: #fff;">Create Workspace</button>
   </div>
 
   <div class="home_first mt-3">
-    <div class="card" style="display: flex; flex-direction: column; padding: 30px; max-width: 400px; background: #fff;">
+    <div class="card" style="display: flex; flex-direction: column; padding: 30px; width: 350px; background: #fff;">
         <div class="card_first mb-4" style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start;">
           <div class="aic_wk_thumb" style="height: 65px; width: 65px; border-radius: 5px; display: flex; justify-content: center; align-items: center; font-weight: bolder; font-size: 30px; background: #A09FA1;">
             <span>GS</span>
@@ -61,7 +87,7 @@
 
         <div class="card_first mb-4">
           <div style="display: flex; flex-direction: row; align-items: center; gap: 10px;">
-            <h3>GST</h3>  <i class="bi bi-pencil-fill" style="background: #efefef; padding: 5px; border-radius: 5px;"></i>
+            <h3>GST</h3>  <i class="bi bi-pencil-fill" type="button" data-bs-toggle="modal" data-bs-target="#editWorkspace" class="btn" style="background: #efefef; padding: 5px; border-radius: 5px;"></i>
           </div>
           <div>Jan 16, 2024</div>
         </div>
@@ -79,6 +105,8 @@
     </footer>
   </body>
   <style>
-
+button{
+  font-weight: bold !important;
+}
   </style>
 </html>  
