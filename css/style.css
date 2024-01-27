@@ -15,8 +15,9 @@ main{
 }
 
 .nav-item{
-  font-weight: bold;
+  font-weight: 500;
 }
+
 .nav-item:hover{
   background: #efefef;
   border-radius: 5px;
@@ -183,7 +184,7 @@ main{
     background-color: #A86463; 
     display: flex; 
     position: absolute; 
-    bottom: 50px; right: 0px;
+    bottom: -60px; right: 0px;
     cursor: pointer;
   }
   @keyframes shake {
@@ -311,9 +312,10 @@ td{
   }
   .home_first{
     flex-direction: column !important;
-    /* justify-content: flex-start; */
+    justify-content: flex-start;
     align-items: flex-start !important;
     gap: 5px;
+    /* border: 1px solid red !important; */
   }
   .hm_input_group{
     display: flex;
@@ -321,5 +323,21 @@ td{
     gap: 5px;
   }
 
+  .miles_image{
+    display: none !important;
+  }
 
+  #chatBot{
+    width: 100%;
+  }
+
+
+}
+
+@media only screen and (max-width: 1020px) {
+  .page_thing{
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
