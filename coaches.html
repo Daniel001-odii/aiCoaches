@@ -84,14 +84,37 @@
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content"  style="height: 90vh !important;">
+    <div class="modal-content"  style="height: 80vh !important;">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Create Coach</strong></h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <div class="modal-body" style="display: flex; flex-direction: row; justify-content: space-between; height: 100% !important;">
-        <div class="left_nav">Left nav</div>
+      <div class="modal-body" style="display: flex; flex-direction: row; justify-content: space-between; height: 100% !important; align-items: flex-start;">
+        <div class="left_nav" style="width: 35%; padding: 0px 30px;">
+          <!-- content for left part of the modal goes here -->
+             <!-- Steps Timeline -->
+        <div class="steps">
+          <div class="timeline">
+            <div class="step active">
+              <div class="step-number">1</div>
+              <div class="step-description"><b>Coach</b><span>Select coach</span></div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-description"><b>Coach Profile</b><span>Create coach profile</span></div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-description"><b>Content Source</b><span>Set content for your coach</span></div>
+            </div>
+          </div>
+        </div>
+
+
+        </div>
+
+        <!-- content for the right part of the modal goes here -->
         <div class="card_list_area" style=" height: 90%; width: 70%; display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; overflow-y: scroll;">
             <!-- image cards start here -->
             <div class="card" style="width: 15rem;">
@@ -132,10 +155,10 @@
 
         </div>
       </div>
-      <div class="modal-footer">
+      <!-- <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Understood</button>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
