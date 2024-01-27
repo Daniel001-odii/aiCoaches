@@ -90,7 +90,7 @@
           <button class="btn top_btn" style="background: #fff; color: #239789; font-weight: bold;">Back to Coaches</button>
       </div>
 
-      <div class="home_first mt-3" style="display: flex; justify-content: ;">
+      <div class="home_first mt-3" style="display: flex;">
 
         <!-- left facing card starts here.............. -->
         <div class="card" style="display: flex; flex-direction: column; width: 750px; background: #fff;  padding: 20px;">
@@ -388,9 +388,9 @@
         <!-- left facing card ends here.............. -->
 
         <!-- RIGHT FACING CARD STARTS HERE--------------- -->
-        <div class="" style="max-width: 700px; display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
-          <!-- <img src="/images/Miles-Uplift.png"> -->
-          <div style="background: url('/images/Miles-Uplift.png');
+        <div class="" style="max-width: 700px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; position: relative;">
+          <div id="chatBot" style="display: flex; flex-direction: row; gap: 20px; align-items: flex-start;">
+             <div style="background: url('/images/Miles-Uplift.png');
           width: 300px;
           min-height: 350px;
           /* border: 1px solid red; */
@@ -425,8 +425,14 @@
               <span class="m-2">Powered by AiCoaches</span>
             </div>
           </div>
-        </div>
+          </div>
+          <!-- <img src="/images/Miles-Uplift.png"> -->
+          <div class="widgetController" id="widgetController"></div>
+         
 
+        </div>
+        
+        
       </div>
     </div>
     </main>
@@ -449,6 +455,17 @@
   </style>
   <script>
     const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+
+    const widgetController = document.getElementById("widgetController");
+    const chatBot = document.getElementById("chatBot");
+    widgetController.onclick = function(){
+      if(chatBot.style.display == 'flex'){
+        chatBot.style.display = 'none'
+      } else {
+        chatBot.style.display = 'flex'
+      }
+      
+    }
   </script>
 </html>  
