@@ -13,7 +13,16 @@ main{
   font-family: Inter,Helvetica,sans-serif;
   font-family: Arial, Helvetica, sans-serif !important;
 }
-
+.btn{
+  font-weight: bold !important;
+}
+.nav-item{
+  font-weight: bold;
+}
+.nav-item:hover{
+  background: #efefef;
+  border-radius: 5px;
+}
 .card .nav .active{
     background: #239789;
     border-radius: none !important;
@@ -192,4 +201,62 @@ main{
         transform: translateX(3px);
         /* transform: translateY(-2px); */
     }
+}
+
+
+
+
+
+
+/* 
+**
+NAV STYLING
+**
+ */
+.user_menu_btn{
+  border: 1px solid #d1d1d1 !important;
+}
+.user_menu > a{
+  text-decoration: none;
+  color: #000;
+ }
+
+.user_menu_area{
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.user_menu_thumb{
+  height: 50px !important;
+  width: 60px !important;
+  padding: 10px;
+  border-radius: 10px;
+  background: darkred;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit_area{
+  border: 1px solid #239789;
+  background: #E7FFF3;
+  padding: 10px;
+  border-radius: 10px;
+}
+.credit_item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.credit_area > span{
+  color: #239789;
+}
+
+.user_menu_item{
+  margin-top: 30px;
+  font-weight: 500;
 }
