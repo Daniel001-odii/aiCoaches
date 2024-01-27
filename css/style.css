@@ -333,7 +333,10 @@ td{
 
 
 }
-
+.page_thing{
+  width: 100%!;
+  justify-content: space-between;
+}
 @media only screen and (max-width: 1020px) {
   .page_thing{
     flex-direction: column !important;
