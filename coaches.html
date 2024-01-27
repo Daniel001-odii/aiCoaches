@@ -91,31 +91,31 @@
       </div>
 
       <div class="modal-body" style="display: flex; flex-direction: row; justify-content: space-between; height: 100% !important; align-items: flex-start;">
-        <div class="left_nav" style="width: 35%; padding: 0px 30px; border: 1px solid gre; display: flex;">
+        <div class="left_nav" style="width: 30%; padding: 0px 30px; border: 1px solid gre; display: flex;">
           <!-- content for left part of the modal goes here -->
              <!-- Steps Timeline -->
-        <div class="steps">
-          <div class="timeline">
-            <div class="step active">
-              <div class="step-number">1</div>
-              <div class="step-description"><b>Coach</b><br/><span>Select coach</span></div>
-            </div>
-            <div class="step">
-              <div class="step-number">2</div>
-              <div class="step-description"><b>Coach Profile</b><br/><span>Create coach profile</span></div>
-            </div>
-            <div class="step">
-              <div class="step-number">3</div>
-              <div class="step-description"><b>Content Source</b><br/><span>Set content for your coach</span></div>
+          <div class="steps">
+            <div class="timeline">
+              <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-description"><b>Coach</b><br/><span>Select coach</span></div>
+              </div>
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-description"><b>Coach Profile</b><br/><span>Create coach profile</span></div>
+              </div>
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-description"><b>Content Source</b><br/><span>Set content for your coach</span></div>
+              </div>
             </div>
           </div>
         </div>
 
-
-        </div>
-
         <!-- content for the right part of the modal goes here -->
-        <div class="card_list_area" style=" height: 90%; width: 70%; display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; overflow-y: scroll;">
+        <div class="right_side" style="height: 100%; width: 100%;">
+          <div class="form_page" id="part_0" style="height: 90%; width: 100%; display: flex; flex-direction: row; gap: 10px; flex-wrap: wrap; overflow-y: scroll;">
+            
             <!-- image cards start here -->
             <div class="card" style="width: 15rem;">
               <img src="/images/Lila-Ananda.png" class="card-img-top" alt="...">
@@ -131,7 +131,7 @@
               <div class="card-body">
                 <h5 class="card-title"><b>Doug Strong</b></h5>
                 <p class="card-text">Body Building Coach</p>
-                <a href="#" class="btn aic_btn">Select Coach</a>
+                <a href="#" class="btn aic_btn selectCoach" onclick="nextPage()">Select Coach</a>
               </div>
             </div>
 
@@ -140,7 +140,7 @@
               <div class="card-body">
                 <h5 class="card-title"><b>Lila Ananda</b></h5>
                 <p class="card-text">Yoga Coach</p>
-                <a href="#" class="btn aic_btn">Select Coach</a>
+                <a href="#" class="btn aic_btn selectCoach" onclick="nextPage()">Select Coach</a>
               </div>
             </div>
 
@@ -149,19 +149,94 @@
               <div class="card-body">
                 <h5 class="card-title"><b>Lila Ananda</b></h5>
                 <p class="card-text">Yoga Coach</p>
-                <a href="#" class="btn aic_btn">Select Coach</a>
+                <a href="#" class="btn aic_btn selectCoach" onclick="nextPage()">Select Coach</a>
               </div>
             </div>
 
+          </div>
+          <div class="form_page" id="part_1" style="display: none; height: 90%; width: 100%; align-items: flex-start; padding: 20px; flex-direction: column; overflow-y: scroll;">
+
+            <div class="mb-3" style="width: 100%;">
+              <label for="coachName" class="form-label">Caoch Name *</label>
+              <input type="text" class="form-control" id="coachName" placeholder="Coach Name">
+              <small>19 Characters remaining</small>
+            </div>
+
+            <div class="mb-3" style="width: 100%;">
+              <label for="coachName" class="form-label">Caoch Expertise *</label>
+              <input type="text" class="form-control" id="coachName" placeholder="Yoga Coach">
+              <small>20 Characters remaining</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="formFile" class="form-label">Full Avatar image</label>
+              <input class="form-control" type="file" id="formFile">
+              <small>Recommended size(px):(200x350)</small>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Base Prompt *</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <small>7000 characters remaining</small>
+              <p style="color: #239789;"><b>Note</b>> Do not include any additional information in the base prompt. custom content should be inserted in the cintent source section.</p>
+            </div>
+
+            <div class="footer_btnGroup" style="width: 100%; display: flex; justify-content: space-between;">
+              <button class="btn" style="background: #E7FDF7; color: #239789;" onclick="prevPage()">< Back</button>
+              <div>
+                <button class="btn aic_btn" onclick="nextPage()">Create Coach</button>
+                <button class="btn aic_btn">Create Custom Coach</button>
+              </div>
+            </div>
+            
+          </div>
+          <div class="form_page" id="part_2" style="display: none; height: 90%; width: 100%; align-items: center; justify-content: center; flex-direction: column; overflow-y: scroll;">
+            <p>Content goes here..</p>
+            <button class="btn btn-danger" onclick="prevPage()">previous</button>
+          </div>
         </div>
+        
       </div>
-      <!-- <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div> -->
+
     </div>
   </div>
 </div>
+<script>
+  
+  let pages = document.getElementsByClassName('form_page');
+  let steps = document.getElementsByClassName('step-number');
+  
+  // let selectCoachButtons = document.getElementsByClassName('selectCoach');
+
+
+  let index = 0;
+  steps[index].classList.add('activeStep');
+
+  nextPage =()=>{
+    steps[index].classList.remove('activeStep');
+    pages[index].style.display = 'none';
+    if(index <= pages.length){
+      index++;
+    } else if(index >= pages.length){
+      index--;
+    }
+    pages[index].style.display = 'flex';
+    steps[index].classList.add('activeStep');
+  }
+
+  prevPage =()=>{
+    steps[index].classList.remove('activeStep');
+    pages[index].style.display = 'none';
+    if(index <= pages.length){
+      index--;
+    }
+    pages[index].style.display = 'flex';
+    steps[index].classList.add('activeStep');
+  }
+
+
+
+</script>
 <!-- modal ends here -->
     <main>
 <div class="container-fluid">
