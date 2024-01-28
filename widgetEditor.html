@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,11 +30,11 @@
       <div class="page_thing mt-3" style="display: flex; flex-direction: row;">
 
         <!-- left facing card starts here.............. -->
-        <div class="card" style="display: flex; flex-direction: column; max-width: 750px; background: #fff;  padding: 20px;">
-          <div class="aic_card_head" style="width: 100%; margin: 0 auto !important; display: flex; justify-content: center; align-items: center !important;">
+        <div class="card" style="">
+          <div class="aic_card_head" style="width: 100%; margin: 0 auto !important; display: flex; justify-content: center; align-items: center !important; padding: 20px;">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-design-tab" data-bs-toggle="pill" data-bs-target="#pills-design" type="button" role="tab" aria-controls="pills-design" aria-selected="true"><i class="bi bi-palette-fill"></i> Design</button>
+                <button style="border-radius: 5px 0px 0px 5px !important;" class="nav-link active" id="pills-design-tab" data-bs-toggle="pill" data-bs-target="#pills-design" type="button" role="tab" aria-controls="pills-design" aria-selected="true"><i class="bi bi-palette-fill"></i> Design</button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-content-tab" data-bs-toggle="pill" data-bs-target="#pills-content" type="button" role="tab" aria-controls="pills-content" aria-selected="false"><i class="bi bi-ui-checks-grid"></i> Content Block</button>
@@ -47,72 +48,289 @@
             </ul>  
           </div>
           
-          <div class="aic_card_body" style="padding: 30px; height: 300px; overflow-y: scroll;">
+          <div class="aic_card_body" style="padding: 0px 30px; height: 300px; overflow-y: scroll;">
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane fade show active" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab" tabindex="1" style="border: 1px solid #efefef; border-radius: 10px;">
-                <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- CONTENT FOR DESIGN - HEADER TAB CGOES HERE--- -->
+                <div class="accordion" id="accordionExample">
+                  
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#headerCollapse" aria-expanded="true" aria-controls="headerCollapse">
                         Header
                       </button>
                     </h2>
-                    <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                    <div id="headerCollapse" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
-
                         <!-- content for Design tab... -->
                         <div class="form-check form-switch">
                           <label class="form-check-label" for="flexSwitchCheckChecked">COACH LOGO</label>
                           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
                         </div>
-                        <div class="input-group">
-                          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <!-- custom image input goes here -->
+                        <div class="aic_file_input">
+                          <input type="file" name="file" id="file" class="inputfile" />
+                          <label for="file">Choose image</label>
+                          <div class="aic_fileThumb"></div>
                         </div>
-                        <span>Recommended size(px)(100 x 100)</span>
+                        <span class="aic_recommend">Recommended size(px)(100 x 100)</span>
                         <hr/>
                         <div class="form-check form-switch">
-                          <label class="form-check-label" for="flexSwitchCheckChecked">PROFILE IMAGE</label>
-                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                          <label class="form-check-label" for="profileImage">PROFILE IMAGE</label>
+                            <input class="form-check-input" type="checkbox" role="switch" id="profileImage" checked>
                         </div>
-                        <div class="input-group">
-                          <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        <div class="aic_input_group">
+                        <div class="aic_group">   
+                              <b>Coach Avatar</b>
+                        <div class="aic_file_input">
+
+                          <input type="file" name="file" id="file" class="inputfile" />
+                          <label for="file">Choose image</label>
+                          <div class="aic_fileThumb"></div>
                         </div>
-                        <span>Recommended size(px)(100 x 100)</span>
+             <span class="aic_recommend">Recommended size(px)(100 x 100)</span>
+                            </div>
+                            
+                         <div class="aic_group">
+                             <b>Visitor Avatar</b>
+                              <div class="aic_file_input">
+                          <input type="file" name="file" id="file" class="inputfile" />
+                          <label for="file">Choose image</label>
+                          <div class="aic_fileThumb"></div>
+                        </div>
+                        <span class="aic_recommend">Recommended size(px)(100 x 100)</span>
+                            </div>
+                        </div>
+                        
                         <hr/>
-                        <h5>Coach Brand Name</h5>
+                        <h6>Coach Brand Name</h6>
                         <select class="form-select" aria-label="Default select example">
                           <option selected>Atlas</option>
                           <option value="1">Mark</option>
                           <option value="2">John</option>
                         </select>
-                        <div class="input-group mt-3">
-                          <input type="text" aria-label="First name" class="form-control">
-                          <input type="text" aria-label="Last name" class="form-control">
+                <div class="aic_input_group">
+                    <!-- CUSTOM COLOR COMPONENT -->
+                    
+                    
+                    <div class="aic_input_group mt-4">
+                      <div class="form-group">
+                        <label for="colorInput">Bg Color</label>
+                        <div class="aic_color">
+                        <span id="colorValue">#000000</span>
+                        <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
                         </div>
-                        <select class="form-select mt-3" aria-label="Default select example">
-                          <option selected>Message</option>
-                        </select>
-                        <div class="mt-3">
-                          <span>Font Family</span>
-                          <select class="form-select" aria-label="Default select example">
-                            <option selected>Roboto Sans</option>
-                          </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="colorInput">Text Color</label>
+                        <div class="aic_color">
+                        <span id="colorValue">#000000</span>
+                        <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
                         </div>
+                      </div>
+                    </div>
+             
+                </div>
+
+                       <!-- content ends here... -->
                         
                       </div>
                     </div>
                   </div>
+
                   <div class="accordion-item">
                     <h2 class="accordion-header">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Create Product
-                      </button>
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#message" aria-expanded="false" aria-controls="createProduct">
+                        Message                    </button>
                     </h2>
-                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+                    <div id="message" class="accordion-collapse collapse" data-bs-parent="#message">
+                      <div class="accordion-body">
+                          <!-- Message content starts here --->
+                          <div class="aic_card_group">
+                              
+                            <div class="aic_small_card">
+                                  <i class="bi bi-palette2 aic_icon"></i>
+                                  <b>Color</b>
+                            </div>
+                            <div class="aic_small_card aic_icon">
+                                  <i class="bi bi-highlights"></i>
+                                  <b>Gradient</b>
+                            </div>
+                            <div class="aic_small_card">
+                                  <i class="bi bi-card-image aic_icon"></i>
+                                  <b>Image</b>
+                            </div>       
+                          
+                          </div>
+                        <div class="aic_group mt-3">   
+                              <b>Image</b>
+                            <div class="aic_file_input">
+                              <input type="file" name="file" id="file" class="inputfile" />
+                              <label for="file">Choose image</label>
+                              <div class="aic_fileThumb"></div>
+                            </div>
+                        </div>
+
+                        <div class="aic_input_group mt-3">
+                          <div class="form-group" style="flex-grow: 1;">
+                            <b>Repeat</b>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>no-repeat</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group" style="flex-grow: 1;">
+                            <b>Position</b>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>center center</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="aic_input_group mt-3">
+                          <div class="form-group" style="flex-grow: 1;">
+                            <b>Attachment</b>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>no-repeat</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group" style="flex-grow: 1;">
+                            <b>Size</b>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>center center</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="aic_input_group mt-3">
+                          <div class="form-group mt-3" style=" width: 100% !important;">
+                            <b>Color</b>
+                            <div class="aic_color" style="flex-grow: 10; width: 100% !important;">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>  
+                      
+
+                        <div class="form-check form-switch mt-3">
+                          <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                          <label class="form-check-label" for="flexSwitchCheckChecked">Overlay</label>
+                        </div>
+                     
+                        <hr/>
+                        
+                        <h6 class="aic_form_title">COACH</h6>
+                        <div class="aic_input_group">
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" type="text" placeholder="Visitor" aria-label="example">
+                          </div>
+                          <div class="form-group">
+                            <label for="colorInput">Text Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>
+                        <hr/>
+
+                        <h6 class="aic_form_title mt-3">COACH MESSAGES</h6>
+                        <div class="aic_input_group">
+                          <div class="form-group">
+                            <label for="colorInput">Background Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="colorInput">Text Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr/>
+
+                        <h6 class="aic_form_title">VISITOR</h6>
+                        <div class="aic_input_group">
+                          <div class="form-group">
+                            <label>Name</label>
+                            <input class="form-control" type="text" placeholder="Visitor" aria-label="example">
+                          </div>
+                          <div class="form-group">
+                            <label for="colorInput">Text Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr/>
+
+                        <h6 class="aic_form_title mt-3">VISITOR MESSAGES</h6>
+                        <div class="aic_input_group">
+                          <div class="form-group">
+                            <label for="colorInput">Background Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="colorInput">Text Color</label>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>
+
+                        <hr/>
+
+                        <span class="aic_form_title mt-3">COACH BUBBLE</span>
+                        <div class="aic_input_group" style="align-items: center;">
+                          <div class="aic_group">   
+                                <b>Image</b>
+                              <div class="aic_file_input">
+                                <input type="file" name="file" id="file" class="inputfile" />
+                                <label for="file">Choose image</label>
+                                <div class="aic_fileThumb"></div>
+                              </div>
+                              <span class="aic_recommend">Recommended size(px):(100x100)</span>
+                          </div>
+                          <div class="aic_group">
+                            <b for="colorInput">Text Color</b>
+                            <div class="aic_color">
+                            <span id="colorValue">#000000</span>
+                            <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
+                            </div>
+                          </div>
+                        </div>
+                     
+                     
+                      </div>
                     </div>
                   </div>
-                </div>
+
+</div>
+                <!-- CONTENT FOR DESIGN TAB ENDS HERE -->
               </div>
               <div class="tab-pane fade" id="pills-content" role="tabpanel" aria-labelledby="pills-content-tab" tabindex="2" style="border: 1px solid #efefef; border-radius: 10px;">
                 <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -224,6 +442,7 @@
               <div class="tab-pane fade" id="pills-settings" role="tabpanel" aria-labelledby="pills-settings-tab" tabindex="4">
                 <!-- CONTENT FOR SETTINGS TAB HERE---------- -->
                 <div class="accordion" id="accordionExample">
+                  
                   <div class="accordion-item">
                     <h2 class="accordion-header">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSettings" aria-expanded="true" aria-controls="collapseSettings">
@@ -310,14 +529,13 @@
                     </div>
                   </div>
 
-
                 </div>
               
               </div>
             </div>
           </div>
 
-          <div class="aic_card_footer" style="border-top: 1px solid #efefef; padding: 10px 2px; display: flex; flex-direction: row; justify-content: flex-end;">
+          <div class="aic_card_footer" style="border-top: 1px solid #efefef; padding: 10px; display: flex; flex-direction: row; justify-content: flex-end;">
             <button class="btn" style="background: #239789; color: #fff;">Save</button>
           </div>
         </div>
@@ -401,5 +619,13 @@
       }
       
     }
+    function updateColor() {
+      const colorInput = document.getElementById('colorInput');
+      const colorValue = document.getElementById('colorValue');
+
+      const selectedColor = colorInput.value;
+      colorValue.textContent = selectedColor.toUpperCase();
+    }
+
   </script>
 </html>  
