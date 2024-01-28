@@ -109,19 +109,19 @@
                           <option value="1">Mark</option>
                           <option value="2">John</option>
                         </select>
-                <div class="aic_input_group">
+                <!-- <div class="aic_input_group row"> -->
                     <!-- CUSTOM COLOR COMPONENT -->
                     
                     
-                    <div class="aic_input_group mt-4">
-                      <div class="form-group">
+                    <div class=" mt-4 row">
+                      <div class="form-group col">
                         <label for="colorInput">Bg Color</label>
                         <div class="aic_color">
                         <span id="colorValue">#000000</span>
                         <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
                         </div>
                       </div>
-                      <div class="form-group">
+                      <div class="form-group col">
                         <label for="colorInput">Text Color</label>
                         <div class="aic_color">
                         <span id="colorValue">#000000</span>
@@ -130,7 +130,7 @@
                       </div>
                     </div>
              
-                </div>
+                <!-- </div> -->
 
                        <!-- content ends here... -->
                         
@@ -162,6 +162,7 @@
                             </div>       
                           
                           </div>
+
                         <div class="aic_group mt-3">   
                               <b>Image</b>
                             <div class="aic_file_input">
@@ -171,8 +172,8 @@
                             </div>
                         </div>
 
-                        <div class="aic_input_group mt-3">
-                          <div class="form-group" style="flex-grow: 1;">
+                        <div class="row mt-3">
+                          <div class="form-group col" style="flex-grow: 1;">
                             <b>Repeat</b>
                             <select class="form-select" aria-label="Default select example">
                               <option selected>no-repeat</option>
@@ -181,7 +182,7 @@
                               <option value="3">Three</option>
                             </select>
                           </div>
-                          <div class="form-group" style="flex-grow: 1;">
+                          <div class="form-group col" style="flex-grow: 1;">
                             <b>Position</b>
                             <select class="form-select" aria-label="Default select example">
                               <option selected>center center</option>
@@ -192,8 +193,8 @@
                           </div>
                         </div>
 
-                        <div class="aic_input_group mt-3">
-                          <div class="form-group" style="flex-grow: 1;">
+                        <div class="row mt-3">
+                          <div class="form-group col" style="flex-grow: 1;">
                             <b>Attachment</b>
                             <select class="form-select" aria-label="Default select example">
                               <option selected>no-repeat</option>
@@ -202,7 +203,7 @@
                               <option value="3">Three</option>
                             </select>
                           </div>
-                          <div class="form-group" style="flex-grow: 1;">
+                          <div class="form-group col" style="flex-grow: 1;">
                             <b>Size</b>
                             <select class="form-select" aria-label="Default select example">
                               <option selected>center center</option>
@@ -232,12 +233,12 @@
                         <hr/>
                         
                         <h6 class="aic_form_title">COACH</h6>
-                        <div class="aic_input_group">
-                          <div class="form-group">
+                        <div class="row">
+                          <div class="form-group col">
                             <label>Name</label>
                             <input class="form-control" type="text" placeholder="Visitor" aria-label="example">
                           </div>
-                          <div class="form-group">
+                          <div class="form-group col">
                             <label for="colorInput">Text Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
@@ -248,15 +249,15 @@
                         <hr/>
 
                         <h6 class="aic_form_title mt-3">COACH MESSAGES</h6>
-                        <div class="aic_input_group">
-                          <div class="form-group">
+                        <div class="row">
+                          <div class="form-group col">
                             <label for="colorInput">Background Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
                             <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
                             </div>
                           </div>
-                          <div class="form-group">
+                          <div class="form-group col">
                             <label for="colorInput">Text Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
@@ -268,12 +269,12 @@
                         <hr/>
 
                         <h6 class="aic_form_title">VISITOR</h6>
-                        <div class="aic_input_group">
-                          <div class="form-group">
+                        <div class="row">
+                          <div class="form-group col">
                             <label>Name</label>
                             <input class="form-control" type="text" placeholder="Visitor" aria-label="example">
                           </div>
-                          <div class="form-group">
+                          <div class="form-group col">
                             <label for="colorInput">Text Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
@@ -285,15 +286,15 @@
                         <hr/>
 
                         <h6 class="aic_form_title mt-3">VISITOR MESSAGES</h6>
-                        <div class="aic_input_group">
-                          <div class="form-group">
+                        <div class="row">
+                          <div class="form-group col">
                             <label for="colorInput">Background Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
                             <input type="color" class="form-control form-control-color" id="colorInput" onchange="updateColor()">
                             </div>
                           </div>
-                          <div class="form-group">
+                          <div class="form-group col">
                             <label for="colorInput">Text Color</label>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
@@ -305,8 +306,8 @@
                         <hr/>
 
                         <span class="aic_form_title mt-3">COACH BUBBLE</span>
-                        <div class="aic_input_group" style="align-items: center;">
-                          <div class="aic_group">   
+                        <div class="row">
+                          <div class="aic_group col">   
                                 <b>Image</b>
                               <div class="aic_file_input">
                                 <input type="file" name="file" id="file" class="inputfile" />
@@ -315,7 +316,7 @@
                               </div>
                               <span class="aic_recommend">Recommended size(px):(100x100)</span>
                           </div>
-                          <div class="aic_group">
+                          <div class="aic_group col">
                             <b for="colorInput">Text Color</b>
                             <div class="aic_color">
                             <span id="colorValue">#000000</span>
