@@ -102,6 +102,8 @@ main{
    }
    .side_content{
     display: none;
+    width: 100%;
+    margin-top: 15px;
    }
 
 .tag_line_fake{
@@ -374,6 +376,7 @@ card
     display: flex;
     flex-direction: row;
     gap: 10px;
+    width: 100% !important;
   }
   .source_select{
     height: 100px;
@@ -401,11 +404,6 @@ card
   .aic_subtitle{
     color: #B6B5BD;
   }
-
-  .side_content{
-    margin-top: 20px;
-  }
-
 
 
 

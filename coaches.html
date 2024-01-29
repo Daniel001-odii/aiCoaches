@@ -127,9 +127,104 @@
               </div>
               
             </div>
-            <div class="form_page" id="part_2" style="display: none;">
-              <p>Content goes here..</p>
-              <button class="btn btn-danger" style="align-self: flex-start;" onclick="prevPage()">previous</button>
+            <div class="form_page" id="part_2" style="display: none; flex-direction: column;">
+              <div class="side_header">
+                <button onclick="showSource(0)" class="source_select">
+                  <i class="bi bi-youtube"></i>
+                  Youtube
+                </button>
+                <button onclick="showSource(1)" class="source_select">
+                  <i class="bi bi-chat-left-text"></i>
+                  Content
+                </button>
+                <button onclick="showSource(2)" class="source_select">
+                  <i class="bi bi-file-earmark-arrow-up"></i>
+                  File Upload
+                </button>
+                <button onclick="showSource(3)" class="source_select">
+                  <i class="bi bi-question-circle-fill"></i>
+                  Q&A
+                </button>
+                <button onclick="showSource(4)" class="source_select">
+                  <i class="bi bi-globe2"></i>
+                  Website
+                </button>
+              </div>
+              <div class="side_content" style="width: 100% !important;">
+                <div class="" style="display: flex; flex-direction: row; align-items: flex-end;">
+                  <div class="" style="flex-grow: 100;">
+                    <label for="youtubeUrl" class="form-label">Youtube URL</label>
+                    <input type="link" class="form-control" id="youtubeUrl" placeholder="https://youtu.be/xxxxxxxxxx">
+                  </div>
+                  <button style="flex-grow: 1;" class="btn top_btn">Extract Content</button>
+                </div>
+               
+                <div class="footer_btnGroup mt-3">
+                  <button class="btn" style="background: #E7FDF7; color: #239789;" onclick="prevPage()">< Back</button>
+                  <button class="btn aic_btn mt-3">Extract & Create</button>
+                </div>
+               
+              </div>
+              <div class="side_content">                 
+                <div class="mt-3">
+                  <label for="youtubeContent" class="form-label">Content</label>
+                  <textarea class="form-control" id="youtubeContent" style="height: 200px; max-height: 200px;"></textarea>
+                  <span class="aic_subtitle">100000 characters remaining</span>
+                </div>
+                <div class="alert alert-info">
+                  Please click the "Extract & Update" button whenever you customize the content in the source
+                </div>
+                <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+              </div>
+              <div class="side_content">         
+                <div class="mb-3">
+                  <label for="formFile" class="form-label">Upload File</label>
+                  <input class="form-control" type="file" id="formFile">
+                  <span class="aic_subtitle">Supported File Type: .txt, Max File Size: 100KB</span>
+                </div>
+
+                <div class="mt-3">
+                  <label for="youtubeContent" class="form-label">Content</label>
+                  <textarea class="form-control" id="youtubeContent" style="height: 200px; max-height: 200px;"></textarea>
+                  <span class="aic_subtitle">100000 characters remaining</span>
+                </div>
+
+                <div class="alert alert-info">
+                  Please click the "Extract & Update" button whenever you customize the content in the source
+                </div>
+                <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+              </div>
+              <div class="side_content">         
+                
+                <div class="alert alert-info" style="display: flex; justify-content: space-between;">
+                  <span>There are no questions & answers</span>
+                  <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                </div>
+                <div class="alert alert-info">
+                 Please click the "Extract & Update" button whenever you customize the Q&A in the source
+                </div>
+                <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+              </div>
+              <div class="side_content">
+                <div class="" style="display: flex; flex-direction: row; align-items: flex-end; width: 100% !important; gap: 10px;">
+                  <div class="" style="flex-grow: 3;">
+                    <label for="URL" class="form-label">URL *</label>
+                    <input type="email" class="form-control" id="URL" placeholder="https://www.example.com">
+                  </div>
+                  <button style="flex-grow: 1;" class="btn top_btn">Extract & Update/button>
+                </div>
+                <div class="tag_line_fake">
+                  <div>
+                    <div class="badge bg-success">Extracted</div>
+                    <span>https://mydailychoice.com/</span>
+                  </div>
+                  <div>
+                    <div class="badge bg-secondary">2810 chars</div>
+                    &times;
+                  </div>
+                  
+                </div>
+              </div>
             </div>
           </div>
         <!-- </div> -->
@@ -202,30 +297,30 @@
             </div>
             <div class="form_page2">
                 <div class="side_header">
-                  <button onclick="showSource(0)" class="source_select">
+                  <button onclick="showSource(5)" class="source_select">
                     <i class="bi bi-youtube"></i>
                     Youtube
                   </button>
-                  <button onclick="showSource(1)" class="source_select">
+                  <button onclick="showSource(6)" class="source_select">
                     <i class="bi bi-chat-left-text"></i>
                     Content
                   </button>
-                  <button onclick="showSource(2)" class="source_select">
+                  <button onclick="showSource(7)" class="source_select">
                     <i class="bi bi-file-earmark-arrow-up"></i>
                     File Upload
                   </button>
-                  <button onclick="showSource(3)" class="source_select">
+                  <button onclick="showSource(8)" class="source_select">
                     <i class="bi bi-question-circle-fill"></i>
                     Q&A
                   </button>
-                  <button onclick="showSource(4)" class="source_select">
+                  <button onclick="showSource(9)" class="source_select">
                     <i class="bi bi-globe2"></i>
                     Website
                   </button>
                 </div>
                 <div class="side_content">
                   <div class="" style="display: flex; flex-direction: row; align-items: flex-end; width: 100% !important; gap: 10px;">
-                    <div class="" style="flex-grow: 3;">
+                    <div class="" style="flex-grow: 100;">
                       <label for="youtubeUrl" class="form-label">Youtube URL</label>
                       <input type="email" class="form-control" id="youtubeUrl" placeholder="https://youtu.be/xxxxxxxxxx">
                     </div>
@@ -428,6 +523,10 @@
   sourceTimeline[index2].classList.add('activeSourcePage');
   sourcesPages[index2].style.display = "flex";
 
+  // SET FRST PAGES AS VISIBLE DEFAULT
+  sourceTimeline[0].classList.add('activeSourcePage');
+  sourcesPages[0].style.display = "flex";
+
   let sPagesArray = Array.from(sourcesPages);
   let sTimelines = Array.from(sourceTimeline);
 
@@ -460,6 +559,9 @@ sourceBtn[0].classList.add("activeSource");
     sourceDisplay[index].style.display = "block";
     sourceBtn[index].classList.add("activeSource");
   }
+
+  showSource(0);
+  showSource(5);
  
 </script>
   </body>
