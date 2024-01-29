@@ -63,9 +63,15 @@
 </div>
 
 <!-- Tab content -->
-<div class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+<div class="tabcontent" style="flex-direction: row; align-items: flex-end;">
+  <div class="aic_form_control">
+    <label>API Key *</label>
+    <div class="aic_group_input">
+      <input type="text" id="APIInput" class="form-control">
+      <button class="btn aic_btn">Update</button>
+    </div>
+  </div>
+  <button class="btn aic_btn aic_btn_danger">Disconnect</button>
 </div>
 
 <div class="tabcontent">
@@ -99,6 +105,18 @@
     </footer>
   </body>
   <style>
+.aic_group_input{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.aic_btn{
+  border-radius: 0px;
+}
+.aic_btn_danger{
+  background: #ffeded !important;
+  color: #d00909 !important;
+}
     /* Style the tab */
 .tab {
   overflow: hidden;
