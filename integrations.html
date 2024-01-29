@@ -33,7 +33,7 @@
       </div>
 
       <div class=" mt-3">
-      <div class="card" style="padding: 40px; display: flex; flex-direction: column; gap: 10px;">
+<div class="card">
                 <!-- Tab links -->
 <div class="tab">
   <div class="aic_cxs">
@@ -76,18 +76,21 @@
 
 <div class="tabcontent">
   <div class="aic_card">
+    <img class="appImage" src="./images/paypal.png">
     <h6>PayPal</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
   </div>
 
   <div class="aic_card">
+    <img class="appImage" src="./images/razorPay.png">
     <h6>Razorpay</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
   </div>
 
   <div class="aic_card">
+    <img class="appImage" src="./images/stripe.png">
     <h6>Stripe</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
@@ -97,6 +100,7 @@
 <div class="tabcontent">
 
   <div class="aic_card">
+    <img class="appImage" src="./images/goToWrbinar.png">
     <h6>GoToWebinar</h6>
     <span>webinar</span>
     <button class="btn top_btn">+ Connect</button>
@@ -107,24 +111,28 @@
 <div class="tabcontent">
  
   <div class="aic_card">
+    <img class="appImage" src="./images/Aweber.png">
     <h6>AWeber</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
   </div>
 
   <div class="aic_card">
+    <img class="appImage" src="./images/activeCampaign.png">
     <h6>ActiveCampaign</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
   </div>
 
   <div class="aic_card">
+    <img class="appImage" src="./images/getResponse.png">
     <h6>GetResponse</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
   </div>
 
   <div class="aic_card">
+    <img class="appImage" src="./images/iContact.png">
     <h6>iContact</h6>
     <span>Autoresponder</span>
     <button class="btn top_btn">+ Connect</button>
@@ -132,25 +140,25 @@
 
 </div>
 
-<div class="tabcontent">
+<div class="tabcontent" style="flex-direction: column;">
   <div class="">
     <label for="SMTPNAME">Name *</label>
     <input type="text" class="form-control" placeholder="Enter Name" id="SMTPNAME">
   </div>
 
   <div class="form-group mt-3 aic_form_group">
-    <div>
+    <div style="flex-grow: 1;">
        <label for="fromName">From Name*</label>
     <input class="form-control" id="fromName" aria-placeholder="Name" type="text">
     </div>
    
 
-    <div>
+    <div style="flex-grow: 1;">
       <label for="fromEmail">From Email *</label>
     <input class="form-control" id="fromEmail" placeholder="Email" type="email">
     </div>
     
-    <div>
+    <div style="flex-grow: 1;">
       <label for="username">Username *</label>
     <input class="form-control" id="username" placeholder="Username" type="text">
     </div>
@@ -158,23 +166,36 @@
     
   </div>
 
-  <div class="form-group mt-3">
-    <label for="Password">Password *</label>
-    <input class="form-control" id="Password" placeholder="Password" type="password">
-
-    <label for="host">Host *</label>
-    <input class="form-control" id="host" placeholder="Host" type="text">
+  <div class="form-group mt-3 aic_form_group">
+    <div style="flex-grow: 1">
+      <label for="Password">Password *</label>
+      <input class="form-control" id="Password" placeholder="Password" type="password">
+    </div>
+    <div style="flex-grow: 1;">
+      <label for="host">Host *</label>
+      <input class="form-control" id="host" placeholder="Host" type="text">
+    </div>
   </div>
 
-  <div class="form-group mt-3">
-    <label for="Port">Port *</label>
-    <input class="form-control" id="Port" placeholder="Port" type="text">
+  <div class="form-group mt-3 aic_form_group">
+    <div style="flex-grow: 1;">
+      <label for="Port">Port *</label>
+      <input class="form-control" id="Port" placeholder="Port" type="text">
+    </div>
 
-    <label for="Encryption">Encryption *</label>
-    <input class="form-control" id="Encryption" placeholder="Encryption" type="text">
-  </div>
+    <div style="flex-grow: 1;">
+      <label for="Encryption">Encryption *</label>
+      <input class="form-control" id="Encryption" placeholder="Encryption" type="text">
+    </div>
+ </div>
+ <div class="form-check form-switch" style="display: flex; justify-content: space-between; padding: 0px; align-items: center;">
+  
+  <label class="form-check-label" for="flexSwitchCheckDefault"><b>Save SMTP as Default?</b><br/>For Sending mails for clients and team</label>
+  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+</div>
 
-  <button class="btn aic_btn">Add</button>
+
+  <button class="btn aic_btn" style="align-self: flex-start; border-radius: 5px;">Add</button>
 </div>
       </div>
       </div>
@@ -188,11 +209,23 @@
     </footer>
   </body>
   <style>
-
+.card{
+  padding: 40px; display: flex; flex-direction: column; gap: 10px;
+}
+h6{
+  color: #239789;
+  font-weight: bold;
+}
+.appImage{
+  height: 60px;
+  width: 60px;
+  mix-blend-mode: multiply;
+  margin-bottom: 10px;
+}
     .aic_form_group{
       display: flex;
       flex-direction: row;
-      width: 10%;
+      width: 100%;
       gap: 10px;
     }
 
@@ -223,11 +256,10 @@
     /* Style the tab */
 .tab {
   overflow: hidden;
-  /* border: 1px solid #ccc; */
-  /* background-color: #f1f1f1; */
   position: relative;
   display: flex;
   flex-direction: row;
+  overflow-x: scroll;
 }
 
 /* Style the buttons that are used to open the tab content */
@@ -284,6 +316,12 @@
   /* height: 100%; */
   /* width: 300px; */
   /* flex-grow: 8; */
+}
+
+@media only screen and (max-width: 600px) {
+  .card{
+    padding: 10px;
+  }
 }
 
   </style>
