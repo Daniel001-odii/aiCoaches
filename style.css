@@ -1,0 +1,601 @@
+body{
+  max-width: 1920px !important;
+  margin: 0 auto;
+}
+
+main{
+  min-height: 78vh;
+}
+.container-fluid{
+  padding: 0px 50px;
+}
+
+*{
+  font-family: Inter,Helvetica,sans-serif;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.nav-item{
+  font-weight: 500;
+}
+
+.nav-item:hover{
+  background: #efefef;
+  border-radius: 5px;
+}
+.card .nav .active{
+    background: #239789;
+    border-radius: none !important;
+    color: #fff !important;
+  }
+  .nav-item > button{
+    border: 1px solid #efefef;
+    border-radius: 0px !important;
+    color: #000 !important;
+  }
+
+
+  .tab-pane{
+    color: #000 !important;
+  }
+  table{
+    /* border: none !important; */
+  }
+  tr{
+    padding: 30px !important;
+    /* border: 1px solid red; */
+  }
+  body{
+    background: #F1F6FB;
+    /* height: 100dvh; */
+  }
+  /* color: #239789 */
+  .nav-link:hover{
+    color: #239789 !important;
+  }
+  .dropdown-item:hover{
+    color: #239789 !important;
+    background: none;
+  }
+
+  .aic_aaa{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-start;
+    /* border: 1px solid red; */
+  }
+
+  .dropdown-menu{
+    margin-bottom: 10px !important;
+  }
+
+  .aic_footer{
+    /* position: absolute; */
+    /* bottom: 0px; */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+    color: #5a5a5a;
+    /* font-size: 20px; */
+  }
+
+  .aic_btn{
+    background: #239789 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+  }
+  .aic_btn:hover{
+    background: #1e7f74 !important;
+  }
+
+  .top_btn{
+    background: #fff !important;
+    color: #239789 !important;
+    font-weight: bold;
+  }
+  .top_btn:hover{
+    background: #239789 !important;
+    color: #fff !important;
+   }
+
+
+   /* height: 90%; 
+   width: 100%; 
+   align-items: flex-start; 
+   padding: 20px; 
+   flex-direction: column; 
+   overflow-y: scroll;" */
+
+/* 
+**CREATE COACHES
+ */
+ .form_page{
+  height: 65vh !important;
+  width: 100%; 
+  display: flex; 
+  /* flex-flow: row wrap; */
+  gap: 10px; 
+  /* flex-wrap: wrap;  */
+  overflow-y: scroll;
+  /* background: yellow; */
+  padding: 10px;
+  /* margin-bottom: 10px !important; */
+  
+  align-items: flex-start;
+}
+
+.aic_createCoach_modal{
+  /* overflow-y: scroll; */
+  /* padding: 20px; */
+  /* height: 100%; */
+  /* background: purple; */
+  display: flex; 
+  flex-direction: row; 
+  align-items: stretch;
+  /* justify-content: space-between;  */
+  /* max-height: 100% !important;  */
+  /* align-items: flex-start; */
+  }
+
+  .footer_btnGroup{
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+
+
+   /* 
+   **widget editor
+   */
+   /* .accordion-item:not(.collapsed){
+    background-color: red !important;
+    color: #fff;
+   } */
+   .accordion-button:not(.collapsed) {
+    font-weight: bold;
+    color: #239789;
+    background-color: #E7FDF7 !important;
+    box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.form-check-input:checked {
+  background-color: #239789 !important;
+  border: none !important;
+}
+
+
+/*
+**custom color input
+*/
+.color-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .color-preview {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #000;
+      margin-right: 10px;
+    }
+    
+ .aic_color{
+     display: flex;
+     flex-direction: row;
+     width: 250px;
+     justify-content: space-between;
+     border: 1px solid #efefef;
+     border-radius: 10px;
+    padding-left: 20px;
+     align-items: center;
+ }   
+ 
+/* 
+**custom file input
+ */
+
+ .aic_form_title{
+  font-weight: bold;
+  color: #239789;
+ }
+ .aic_recommend{
+  color: grey;
+  font-size: 14px;
+ }
+ .inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.inputfile + label {
+  color: grey;
+  background-color: #efefef;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    color: #fff;
+    background: #239789;
+}
+
+.aic_file_input{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    gap: 5px;
+}
+
+.aic_fileThumb{
+  height: 100%;
+  width: 40px;
+  background-color: #efefef !important;
+  background: url('../images/Atlas.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.aic_input_group{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.aic_group{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}   
+/*
+card
+}
+*/
+.aic_card_group{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.aic_small_card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #efefef;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 15px;
+    width: 100px;
+}
+.aic_small_card:hover{
+    border-bottom: 3px solid #239789;
+}
+.aic_small_card:hover .aic_icon{
+  color: #1e7f74;
+}
+
+.aic_createCoach_left_nav{
+  width: 30%; 
+  padding: 10px; 
+  display: flex;
+}
+
+
+
+   /* 
+   **timeline modal style 
+   */
+   .steps {
+    width: 100%;
+    padding-right: 20px;
+    /* border-right: 2px solid #ddd; */
+    /* border: 1px solid red; */
+  }
+
+  .step {
+    display: flex;
+    align-items: flex-start;
+    width: 100% !important;
+    font-weight: bolder;
+    /* border: 1px solid red; */
+  }
+
+  .step-number {
+    z-index: 99999;
+    padding: 30px;
+    width: 40px;
+    height: 40px;
+    /* background-color: #239789; */
+    background: #E7FFF3;
+    color: #239789;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    /* margin-bottom: 55px; */
+  }
+
+  .activeStep{
+    color: #E7FFF3 !important;
+    background: #239789 !important;
+  }
+
+
+  .step-description {
+    margin-left: 10px;
+    /* border: 1px solid red; */
+    /* width: 300px !important; */
+  }
+
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 260px;
+  }
+
+  .timeline::after {
+    content: '';
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    width: 2px;
+    height: 70%;
+    background-color: #ddd;
+  }
+
+  .timeline .step:last-child::before {
+    display: none; /* Hide the vertical line after the last step */
+  }
+
+
+
+
+  /* widget styles.... */
+  .widgetController{
+    height: 80px; width: 80px; border-radius: 50%; 
+    background: url('../images/Atlas.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: shake 0.5s ease-in-out infinite;
+    background-color: #A86463; 
+    display: flex; 
+    position: absolute; 
+    bottom: -60px; right: 0px;
+    cursor: pointer;
+  }
+  @keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+        transform: translateY(0);
+    }
+    25%, 75% {
+        /* transform: translateX(-3px); */
+        transform: translateY(2px);
+    }
+    50% {
+        transform: translateX(3px);
+        /* transform: translateY(-2px); */
+    }
+}
+
+
+
+
+
+
+/* 
+**
+NAV STYLING
+**
+ */
+.user_menu_btn{
+  border: 1px solid #d1d1d1 !important;
+}
+.user_menu > a{
+  text-decoration: none;
+  color: #000;
+ }
+
+.user_menu_area{
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.user_menu_thumb{
+  height: 50px !important;
+  width: 60px !important;
+  padding: 10px;
+  border-radius: 10px;
+  background: darkred;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.credit_area{
+  border: 1px solid #239789;
+  background: #E7FFF3;
+  padding: 10px;
+  border-radius: 10px;
+}
+.credit_item{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.credit_area > span{
+  color: #239789;
+}
+
+.user_menu_item{
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+
+
+.home_first{
+  /* height: 100px;  */
+  width: 100%; 
+  align-items: center; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between;
+  /* border: 1px solid red; */
+}
+th{
+  color: grey !important;
+  padding: 20px !important;
+}
+td{
+  padding: 20px !important;
+}
+.aic_rounded_table{
+  border: 2px solid #efefef !important;
+  border-radius: 10px !important;
+  background: #fff;
+}
+.aic_coach_thumb{
+  height: 60px; 
+  width: 60px; 
+  border-radius: 50%; 
+  background: url('../images/Atlas.png'); 
+  background-position: center; 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.hm_input_group{
+  display: flex; 
+  flex-direction: row; 
+  width: 75%; 
+  gap: 10px;
+}
+
+/* 
+** MEDIA QUERIES
+**
+ */
+
+@media only screen and (max-width: 600px) {
+
+  .container-fluid{
+    padding: 10px;
+  }
+  .home_first{
+    flex-direction: column !important;
+    justify-content: flex-start;
+    align-items: flex-start !important;
+    gap: 5px;
+    /* border: 1px solid red !important; */
+  }
+  .hm_input_group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }`
+
+  .miles_image{
+    display: none !important;
+  }
+
+  #chatBot{
+    width: 100%;
+  }
+
+
+}
+.page_thing{
+  width: 100%!;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1020px) {
+  .page_thing{
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+
+
+/* 
+** SPECIFICALLY FOR THE CREATE COACH MODAL */
+@media only screen and (max-width: 1200px) {
+  .aic_createCoach_modal{
+    flex-direction: column;
+    padding: 0px;
+  }
+  .aic_createCoach_left_nav{
+    width: 100%;
+    /* position: fixed; */
+    /* border: 1px solid green; */
+  }
+  .timeline{
+    flex-direction: row !important;
+    display: flex;
+    /* border: 1px solid red; */
+    height: 50px;
+    width: 500px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .steps{
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    
+  }
+  .step{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* padding: 10px; */
+    gap: 10px;
+  }
+  .step-description{
+    font-size: 10px;
+  }
+  .step-description > span{
+    display: none;
+  }
+  .timeline::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 65px;
+    height: 2px;
+    width: 66%;
+    background-color: #ddd;
+  }
+
+  .right_side{
+    overflow-y: scroll;
+  }
+  .form_page{
+    margin-top: 20px;
+    justify-content: center;
+    height: 100% !important;
+  }
+}
