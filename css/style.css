@@ -513,10 +513,13 @@ align-items: flex-start;
   }
   .steps{
     padding: 0px;
+    display: flex;
+    justify-content: center;
   }
-  /* .step{
-    align-items: center;
-  } */
+  .step{
+    display: flex;
+    justify-content: center;
+  }
   .step-description{
     display: none;
   }
