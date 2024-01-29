@@ -10,6 +10,7 @@ const footerContent = `
   </div>
 `;
 
+
 const headerContent = `
 <nav class="navbar navbar-expand-lg" style="background: #fff;">
 <div class="container-fluid">

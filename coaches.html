@@ -17,8 +17,8 @@
      <!-- content will be auto injected by javascript -->
     </header>
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- CRATE COACH MODAL STARTS HERE -->
+<div class="modal fade" id="createCoachModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
@@ -139,45 +139,179 @@
     </div>
   </div>
 </div>
+<!-- CRATE COACH MODAL ENDS HERE -->
 
+<!-- SOURCES MODAL STARTS HERE -->
+<div class="modal fade" id="sourcesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel"><strong>Sources</strong></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
-<script>
+      <div class="modal-body aic_createCoach_modal">
+          <div class="aic_createCoach_left_nav">
+            <!-- content for left part of the modal goes here -->
+               <!-- Steps Timeline -->
+            <div class="sourcesTimeline">
+                <button onclick="nextSourcePage(0)" class="sourcesStep">
+                  <i class="bi bi-stack"></i>
+                  <div>
+                    <b>Coach Profile</b><br/>
+                    <span>Edit coach profile</span>
+                  </div>
+                </button>
+                <button onclick="nextSourcePage(1)" class="sourcesStep">
+                  <i class="bi bi-stack"></i>
+                  <div>
+                    <b>Coach Profile</b><br/>
+                    <span>Edit coach profile</span>
+                  </div>
+                </button>
+            </div>
+          </div>
   
-  let pages = document.getElementsByClassName('form_page');
-  let steps = document.getElementsByClassName('step-number');
+          <!-- content for the right part of the modal goes here -->
+          <div class="right_side">
+            <div class="form_page2">
+              <div class="mt-3" style="width: 100%;">
+                <label for="coachName" class="form-label">Caoch Name *</label>
+                <input type="text" class="form-control" id="coachName" placeholder="Coach Name">
+                <small>19 Characters remaining</small>
+              </div>
   
-  // let selectCoachButtons = document.getElementsByClassName('selectCoach');
+              <div class="mt-3" style="width: 100%;">
+                <label for="coachExpertise" class="form-label">Caoch Expertise *</label>
+                <input type="text" class="form-control" id="coachExpertise" placeholder="Yoga Coach">
+                <small>20 Characters remaining</small>
+              </div>
+  
+            
+              <div class="mt-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Base Prompt *</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <small>7000 characters remaining</small>
+                <p style="color: #239789;"><b>Note</b>> Do not include any additional information in the base prompt. custom content should be inserted in the cintent source section.</p>
+              </div>
+  
+              <div class="footer_btnGroup">
+                <button class="btn aic_btn">Update</button>
+              </div>
+              
+            </div>
+            <div class="form_page2">
+                <div class="side_header">
+                  <button onclick="showSource(0)" class="source_select">
+                    <i class="bi bi-youtube"></i>
+                    Youtube
+                  </button>
+                  <button onclick="showSource(1)" class="source_select">
+                    <i class="bi bi-chat-left-text"></i>
+                    Content
+                  </button>
+                  <button onclick="showSource(2)" class="source_select">
+                    <i class="bi bi-file-earmark-arrow-up"></i>
+                    File Upload
+                  </button>
+                  <button onclick="showSource(3)" class="source_select">
+                    <i class="bi bi-question-circle-fill"></i>
+                    Q&A
+                  </button>
+                  <button onclick="showSource(4)" class="source_select">
+                    <i class="bi bi-globe2"></i>
+                    Website
+                  </button>
+                </div>
+                <div class="side_content">
+                  <div class="" style="display: flex; flex-direction: row; align-items: flex-end; width: 100% !important; gap: 10px;">
+                    <div class="" style="flex-grow: 3;">
+                      <label for="youtubeUrl" class="form-label">Youtube URL</label>
+                      <input type="email" class="form-control" id="youtubeUrl" placeholder="https://youtu.be/xxxxxxxxxx">
+                    </div>
+                    <button style="flex-grow: 1;" class="btn top_btn">Extract Content</button>
+                  </div>
+                 
+                  <div class="mt-3">
+                    <label for="youtubeContent" class="form-label">Content</label>
+                    <textarea class="form-control" id="youtubeContent" style="height: 200px; max-height: 200px;"></textarea>
+                    <span class="aic_subtitle">100000 characters remaining</span>
+                  </div>
+                  <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                </div>
+                <div class="side_content">                 
+                  <div class="mt-3">
+                    <label for="youtubeContent" class="form-label">Content</label>
+                    <textarea class="form-control" id="youtubeContent" style="height: 200px; max-height: 200px;"></textarea>
+                    <span class="aic_subtitle">100000 characters remaining</span>
+                  </div>
+                  <div class="alert alert-info">
+                    Please click the "Extract & Update" button whenever you customize the content in the source
+                  </div>
+                  <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                </div>
+                <div class="side_content">         
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Upload File</label>
+                    <input class="form-control" type="file" id="formFile">
+                    <span class="aic_subtitle">Supported File Type: .txt, Max File Size: 100KB</span>
+                  </div>
+
+                  <div class="mt-3">
+                    <label for="youtubeContent" class="form-label">Content</label>
+                    <textarea class="form-control" id="youtubeContent" style="height: 200px; max-height: 200px;"></textarea>
+                    <span class="aic_subtitle">100000 characters remaining</span>
+                  </div>
+
+                  <div class="alert alert-info">
+                    Please click the "Extract & Update" button whenever you customize the content in the source
+                  </div>
+                  <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                </div>
+                <div class="side_content">         
+                  
+                  <div class="alert alert-info" style="display: flex; justify-content: space-between;">
+                    <span>There are no questions & answers</span>
+                    <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                  </div>
+                  <div class="alert alert-info">
+                   Please click the "Extract & Update" button whenever you customize the Q&A in the source
+                  </div>
+                  <button class="btn aic_btn mt-3" style="margin: 0 auto !important;">Extract & Update</button>
+                </div>
+                <div class="side_content">
+                  <div class="" style="display: flex; flex-direction: row; align-items: flex-end; width: 100% !important; gap: 10px;">
+                    <div class="" style="flex-grow: 3;">
+                      <label for="URL" class="form-label">URL *</label>
+                      <input type="email" class="form-control" id="URL" placeholder="https://www.example.com">
+                    </div>
+                    <button style="flex-grow: 1;" class="btn top_btn">Extract & Update/button>
+                  </div>
+                  <div class="tag_line_fake">
+                    <div>
+                      <div class="badge bg-success">Extracted</div>
+                      <span>https://mydailychoice.com/</span>
+                    </div>
+                    <div>
+                      <div class="badge bg-secondary">2810 chars</div>
+                      &times;
+                    </div>
+                    
+                  </div>
+                </div>
+            </div>
+          </div>
+        <!-- </div> -->
+        
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- SOURCES MODAL ENDS HERE -->
 
 
-  let index = 0;
-  steps[index].classList.add('activeStep');
 
-  nextPage =()=>{
-    steps[index].classList.remove('activeStep');
-    pages[index].style.display = 'none';
-    if(index <= pages.length){
-      index++;
-    } else if(index >= pages.length){
-      index--;
-    }
-    pages[index].style.display = 'flex';
-    steps[index].classList.add('activeStep');
-  }
-
-  prevPage =()=>{
-    steps[index].classList.remove('activeStep');
-    pages[index].style.display = 'none';
-    if(index <= pages.length){
-      index--;
-    }
-    pages[index].style.display = 'flex';
-    steps[index].classList.add('activeStep');
-  }
-
-
-
-</script>
-<!-- modal ends here -->
     <main>
 <div class="container-fluid">
   <div class="home_first mt-3">
@@ -187,7 +321,7 @@
       </div>
       <div class="coach_header_btn">
         <a href="index.html"><button class="btn top_btn">Back to Workspace</button></a>
-        <button class="btn" style="background: #239789; color: #fff;" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        <button class="btn" style="background: #239789; color: #fff;" type="button" data-bs-toggle="modal" data-bs-target="#createCoachModal">
           <strong>Create Coach</strong>
         </button>
       </div>
@@ -231,7 +365,7 @@
                 </button>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="widgetEditor.html"><i class="bi bi-pencil-fill" style="margin-right:5px"></i>Edit</a></li>
-                  <li><a class="dropdown-item" href="#"><i class="bi bi-stack" style="margin-right:5px"></i>Sources</a></li>
+                  <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#sourcesModal"><i class="bi bi-stack" style="margin-right:5px"></i>Sources</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-eye-fill" style="margin-right:5px"></i>Preview</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-x" style="margin-right:5px"></i>Deactivate</a></li>
                   <li><a class="dropdown-item" href="#"><i class="bi bi-envelope" style="margin-right:5px"></i>Autoresponder</a></li>
@@ -255,6 +389,79 @@
         <div>Support</div>
       </div>
     </footer>
+    
+<script>
+  
+  let pages = document.getElementsByClassName('form_page');
+  let steps = document.getElementsByClassName('step-number');
+  
+  let index = 0;
+  steps[index].classList.add('activeStep');
+
+  nextPage =()=>{
+    steps[index].classList.remove('activeStep');
+    pages[index].style.display = 'none';
+    if(index <= pages.length){
+      index++;
+    } else if(index >= pages.length){
+      index--;
+    }
+    pages[index].style.display = 'flex';
+    steps[index].classList.add('activeStep');
+  }
+
+  prevPage =()=>{
+    steps[index].classList.remove('activeStep');
+    pages[index].style.display = 'none';
+    if(index <= pages.length){
+      index--;
+    }
+    pages[index].style.display = 'flex';
+    steps[index].classList.add('activeStep');
+  }
+
+  // FOR SOURCES MODAL...
+  let sourcesPages = document.getElementsByClassName("form_page2");
+  let sourceTimeline = document.getElementsByClassName("sourcesStep");
+  let index2 = 0;
+
+  sourceTimeline[index2].classList.add('activeSourcePage');
+  sourcesPages[index2].style.display = "flex";
+
+  let sPagesArray = Array.from(sourcesPages);
+  let sTimelines = Array.from(sourceTimeline);
+
+  nextSourcePage =(index)=>{
+    sPagesArray.forEach(page => {page.style.display = "none"});
+    sTimelines.forEach(timeline =>{timeline.classList.remove('activeSourcePage')});
+
+   
+    sourceTimeline[index].classList.add('activeSourcePage');
+    sourcesPages[index].style.display = "flex";
+  }
+
+
+
+
+  // REVEAL EACH SOURCE WHEN ITS RESPECTIVE BUTTON IS CLICKED.....
+let sourceBtn = document.getElementsByClassName("source_select");
+let sourceDisplay = document.getElementsByClassName("side_content");
+sourceDisplay[0].style.display = "block";
+sourceBtn[0].classList.add("activeSource");
+
+
+  let btnArray = Array.from(sourceBtn);
+  let sourceDisplayArray = Array.from(sourceDisplay);
+
+  function showSource(index){
+    sourceDisplayArray.forEach(source => {source.style.display = "none"});
+    btnArray.forEach(btn => {btn.classList.remove("activeSource")});
+
+    sourceDisplay[index].style.display = "block";
+    sourceBtn[index].classList.add("activeSource");
+  }
+ 
+</script>
   </body>
   <style>
   </style>

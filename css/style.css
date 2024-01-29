@@ -92,7 +92,7 @@ main{
   }
 
   .top_btn{
-    background: #fff !important;
+    background: #efefef !important;
     color: #239789 !important;
     font-weight: bold;
   }
@@ -100,8 +100,20 @@ main{
     background: #239789 !important;
     color: #fff !important;
    }
+   .side_content{
+    display: none;
+   }
 
+.tag_line_fake{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #efefef;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 
+}
    /* height: 90%; 
    width: 100%; 
    align-items: flex-start; 
@@ -112,6 +124,11 @@ main{
 /* 
 **CREATE COACHES
  */
+ .form_page2{
+  width: 100%;
+  display: none;
+  flex-direction: column;
+}
  .form_page{
   height: 65vh !important;
   width: 100%; 
@@ -128,16 +145,9 @@ main{
 }
 
 .aic_createCoach_modal{
-  /* overflow-y: scroll; */
-  /* padding: 20px; */
-  /* height: 100%; */
-  /* background: purple; */
   display: flex; 
   flex-direction: row; 
-  align-items: stretch;
-  /* justify-content: space-between;  */
-  /* max-height: 100% !important;  */
-  /* align-items: flex-start; */
+  width: 100%;
   }
 
   .footer_btnGroup{
@@ -328,10 +338,75 @@ card
     /* margin-bottom: 55px; */
   }
 
+  .sourcesTimeline{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .sourcesStep{
+    display: flex;
+    flex-direction: row;
+    /* background: #E7FFF3; */
+    /* color: #239789; */
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+    width: 100%;
+    border: none;
+
+    /* border: 1px solid red; */
+  }
+
   .activeStep{
     color: #E7FFF3 !important;
     background: #239789 !important;
   }
+
+  .activeSourcePage{
+    background: #E7FFF3;
+  }
+
+  .side_header{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .source_select{
+    height: 100px;
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    border-radius: 10px;
+    border: 1px solid #efefef;
+    color: #B6B5BD;
+  }
+  .source_select:hover{
+    border: 1px solid transparent;
+    background: #239789;
+    color: #fff;
+  }
+  .activeSource{
+    border: 1px solid transparent;
+    background: #239789;
+    color: #fff;
+  }
+
+  .aic_subtitle{
+    color: #B6B5BD;
+  }
+
+  .side_content{
+    margin-top: 20px;
+  }
+
+
 
 
   .step-description {
@@ -528,6 +603,11 @@ td{
   width: 100%!;
   justify-content: space-between;
 }
+.right_side{
+  width: 100%;
+}
+
+
 @media only screen and (max-width: 1020px) {
   .page_thing{
     flex-direction: column !important;

@@ -24,7 +24,7 @@ main{
   border-radius: 5px;
 }
 .card .nav .active{
-    background: #239789;
+    background: #239789 !important;
     border-radius: none !important;
     color: #fff !important;
   }
@@ -33,6 +33,7 @@ main{
     border-radius: 0px !important;
     color: #000 !important;
   }
+
 
 
   .tab-pane{
@@ -326,6 +327,14 @@ card
     align-items: center;
     font-weight: bolder;
     /* margin-bottom: 55px; */
+  }
+
+  .sourcesStep{
+    display: flex;
+    flex-direction: row;
+    /* background: #E7FFF3; */
+    background: red;
+    color: #239789;
   }
 
   .activeStep{
