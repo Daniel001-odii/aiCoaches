@@ -240,7 +240,11 @@ card
   color: #1e7f74;
 }
 
-
+.aic_createCoach_left_nav{
+  width: 30%; 
+  padding: 0px 30px; 
+  display: flex;
+}
 
 
 
@@ -479,5 +483,41 @@ td{
     flex-direction: column !important;
     align-items: flex-start;
     gap: 20px;
+  }
+}
+
+
+.aic_createCoach_modal{
+display: flex; 
+flex-direction: row; 
+justify-content: space-between; 
+height: 100% !important; 
+align-items: flex-start;
+}
+/* 
+** SPECIFICALLY FOR THE CREATE COACH MODAL */
+@media only screen and (max-width: 1200px) {
+  .aic_createCoach_modal{
+    flex-direction: column;
+  }
+  .aic_createCoach_left_nav{
+    width: 100%;
+    border: 1px solid green;
+  }
+  .timeline{
+    flex-direction: row !important;
+    display: flex;
+    border: 1px solid red;
+    width: 100% !important;
+    justify-content: center;
+  }
+  .steps{
+    padding: 0px;
+  }
+  /* .step{
+    align-items: center;
+  } */
+  .step-description{
+    display: none;
   }
 }
