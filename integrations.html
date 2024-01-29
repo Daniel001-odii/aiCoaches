@@ -75,8 +75,23 @@
 </div>
 
 <div class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
+  <div class="aic_card">
+    <h6>PayPal</h6>
+    <span>Autoresponder</span>
+    <button class="btn top_btn">+ connect</button>
+  </div>
+
+  <div class="aic_card">
+    <h6>Razorpay</h6>
+    <span>Autoresponder</span>
+    <button class="btn top_btn">+ connect</button>
+  </div>
+
+  <div class="aic_card">
+    <h6>Stripe</h6>
+    <span>Autoresponder</span>
+    <button class="btn top_btn">+ connect</button>
+  </div>
 </div>
 
 <div class="tabcontent">
@@ -117,6 +132,15 @@
   background: #ffeded !important;
   color: #d00909 !important;
 }
+
+.aic_card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #efefef;
+}
     /* Style the tab */
 .tab {
   overflow: hidden;
@@ -142,7 +166,7 @@
 /* Style the tab content */
 .tabcontent {
   display: none;
-  flex-direction: column;
+  flex-direction: row;
   padding: 6px 12px;
   /* border: 1px solid #ccc; */
   border-top: none;
